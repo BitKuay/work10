@@ -35,6 +35,9 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
+        - name: List APK files
+          run: ls -R build/app/outputs
+
       # 6. เก็บไฟล์ APK เป็น Artifact
       - name: Upload APK 
         uses: actions/upload-artifact@v4
